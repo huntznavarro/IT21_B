@@ -1,18 +1,14 @@
-console.log("hello world");
+//Console Input
+const readline=require("readline");
 
-num1= 2;
-num2= 3;
+const rl = readline.createInterface({
+    input:process.stdin,
+    output: process.stdout
+})
 
-sum = num1 + num2;
-diff = num1 - num2;
- prod = num1 * num2;
-qou = num1 / num2;
-
-
-console.log("The sum of "+ num1 + " & " + num2+ " is " + sum  );
-
-console.log("The diffrencre of "+ num1 + " & "+ num2+ " is " + diff  );
-
-console.log("The product of "+ num1 + " & "+ num2+ " is " + prod  );
-
-console.log("The qoutient  of "+ num1 + " & "+ num2+ " is " + qou );
+console.log("---------------------------");
+console.log("Factorial Application");
+console.log("1. Say Hello");
+console.log("2. Factorial");
+console.log("3. Exit Application");
+console.log("---------------------------");
