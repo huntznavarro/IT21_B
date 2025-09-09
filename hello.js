@@ -5,7 +5,7 @@ const rl = readline.createInterface({
     input:process.stdin,
     output: process.stdout
 })
-function mainMenu();
+function mainMenu(){
 console.log("---------------------------");
 console.log("Factorial Application");
 console.log("1. Say Hello");
@@ -27,6 +27,7 @@ rl.question("Enter your choice (1-3): ", choice =>{
     }
 
     })
+    }
      
     function sayHello(){
     console.log("Hello");
@@ -63,3 +64,19 @@ function backToMenu(){
     console.log("1. Back to menu");
     console.log("2. Exit");
 {
+     rl.question("What would you like to do next? (1-2) ", (backToMenuChoice)=>{
+
+        if(backToMenuChoice==="1"){
+            console.clear();
+            mainMenu();
+        } else if (backToMenuChoice ==="2"){
+            exitProgram();
+        } else {
+            console.log("Invalid Choice. Please Try Again!");
+            backToMenu();
+        }
+
+    })
+}
+}
+mainMenu();
