@@ -53,3 +53,8 @@ rl.question("Enter your choice (1-3): ", choice =>{
               backToMenu();
         })
 }
+function exitProgram(){
+    console.log("Exiting Application");
+    rl.close();
+    console.clear();
+}
