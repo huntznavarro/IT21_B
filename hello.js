@@ -26,4 +26,11 @@ rl.question("Enter your choice (1-3): ", choice =>{
         console.log("Invalid Choice. Please Try Again");
     }
 
-})
+    })
+     
+    function sayHello(){
+    console.log("Hello");
+    }
+
+    
+   
