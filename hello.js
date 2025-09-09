@@ -58,3 +58,8 @@ function exitProgram(){
     rl.close();
     console.clear();
 }
+function backToMenu(){
+    console.log("--------------");
+    console.log("1. Back to menu");
+    console.log("2. Exit");
+{
