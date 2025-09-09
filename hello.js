@@ -50,5 +50,6 @@ rl.question("Enter your choice (1-3): ", choice =>{
 
                 console.log("The factorial of " + num + " is " + fact);
             }
-            }
+              backToMenu();
+        })
 }
