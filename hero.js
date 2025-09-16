@@ -16,20 +16,26 @@ class Hero{
      }
 
 
-showStats(){
-console.log("Name: " +this.name);
-console.log("Health: " +this.Health);
-console.log("Attack: " +this.attack);
-console.log("-------")
+  showStats(){
+ console.log("Name: " +this.name);
+ console.log("Health: " +this.Health);
+ console.log("Attack: " +this.attack);
+ console.log("-------")
 
+  }
 
 }
-
-}
-
-
+  class Warrior extends Hero{
+    useAbility(){
+        console.log('${this.name}uses power Strike')
+    }
+  }
+  
 const hero1 = newHero("Thorin,100,10");
 const hero2 = newHero("Gandalf,100,8");
   
 hero1.showStats();
  hero2.showStats();   
+
+ Thorin.showStats();
+ Thorin.useAbility();
