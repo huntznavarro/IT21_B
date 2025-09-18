@@ -43,10 +43,10 @@ class Hero{
         console.log ("Mana:" + this.mana);
     }
 }
-const Thorin = newHero("Thorin,100,10");
-const Gandalf = newHero("Gandalf,100,8");
+const Thorin = new Warrior("Thorin,100,10");
+const Gandalf = new Mage("Gandalf,100,8");
   
-Thorin.showStats();
-Thorin.useAbility();
+//Thorin.showStats();
+//Thorin.useAbility();
  Gandalf.showStats();    
  Gandalf.useAbility();
