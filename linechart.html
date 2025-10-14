@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>line chart</title>
+</head>
+<body>
+    <h1>line chart</h1>
+    <div>
+  <canvas id="myChart"></canvas>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script> 
+        class linechart{
+        constructor (canvasId,dataURL){
+        this.dataURL = dataURL;
+        this.chart = null
+
+        }
+        renderChart(data){
+            const ctx = document.getElementById(this.canvaId).getContext("2D");
+
+            this.chart = new chart (ctx,{
+                type:"line",
+                dta:{
+                    labels: "monthly Data"
+                    data: data.values,
+                    boarderwidth:1
+                    
+
+                }
+
+            }
+
+            )
+
+            }
+        }
+
+</script>
+</html>
