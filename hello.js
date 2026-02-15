@@ -1,18 +1,56 @@
-console.log("hello world");
+const readline = require("readline");
 
-num1= 2;
-num2= 3;
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-sum = num1 + num2;
-diff = num1 - num2;
- prod = num1 * num2;
-qou = num1 / num2;
+function sayHello() {
 
+  rl.question("\nPress Enter to go back to the menu...", () => {
+    mainMenu(); // back to menu only after pressing Enter
+  });
+}
 
-console.log("The sum of "+ num1 + " & " + num2+ " is " + sum  );
+function askFeeling() {
+  rl.question("Are you okay today? (yes/no) ", (answer) => {
+    if (answer.toLowerCase() === "yes") {
+      console.log("That's great to hear! 😊");
+    } else if (answer.toLowerCase() === "no") {
+      console.log("Sorry to hear that. Hope things get better soon. ❤️");
+    } else {
+      console.log("I didn’t understand, but I hope you’re doing well!");
+    }
+    rl.question("\nPress Enter to go back to the menu...", () => {
+      mainMenu(); // back to menu only after pressing Enter
+    });
+  });
+}
 
-console.log("The diffrencre of "+ num1 + " & "+ num2+ " is " + diff  );
+function mainMenu() {
+  console.log("\n--- Main Menu ---");
+  console.log("1. Say Hello");
+  console.log("2. Ask if you’re okay");
+  console.log("3. Exit");
 
-console.log("The product of "+ num1 + " & "+ num2+ " is " + prod  );
+  rl.question("Choose an option: ", (choice) => {
+    switch (choice) {
+      case "1":
+        sayHello();
+        break;
+      case "2":
+        askFeeling();
+        break;
+      case "3":
+        console.log("Goodbye!");
+        rl.close();
+        break;
+      default:
+        console.log("Invalid choice, try again.");
+        mainMenu();
+    }
+  });
+}
 
-console.log("The qoutient  of "+ num1 + " & "+ num2+ " is " + qou );
+// start the program
+mainMenu();
